@@ -5,6 +5,7 @@
  */
 
 import browserSync from 'browser-sync';
+import chmod from 'gulp-chmod';
 import gulp from 'gulp';
 import notify from './notify';
 
@@ -24,6 +25,7 @@ function buildMedia() {
             { base: process.env.DIRECTORY_SRC }
         )
         .pipe(notify.onError('MEDIA: error'))
+        .pipe(chmod(0o644))
         .pipe(gulp.dest(process.env.DIRECTORY_DEST))
         .on('end', notify.onLog('MEDIA: rebuild complete'))
         .on('end', browser.reload);

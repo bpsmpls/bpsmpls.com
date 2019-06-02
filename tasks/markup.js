@@ -6,6 +6,7 @@
 
 /* eslint-disable camelcase, no-param-reassign */
 import browserSync from 'browser-sync';
+import chmod from 'gulp-chmod';
 import gulp from 'gulp';
 import notify from './notify';
 import prettify from 'gulp-prettify';
@@ -55,6 +56,7 @@ function buildMarkup() {
             path: 'src/templates/',
         }))
         .pipe(strip.html())
+        .pipe(chmod(0o644))
         .pipe(gulp.dest(process.env.DIRECTORY_DEST))
         .on('end', notify.onLog('MARKUP: rebuild complete'))
         .on('end', browser.reload);
