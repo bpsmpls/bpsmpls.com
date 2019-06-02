@@ -16,22 +16,28 @@
 	color:var(--main-bg-color);
 	display:flex;
 	flex-direction:row;
-	height:95vh;
 	justify-content:center;
+	max-height:95vh;
 	width:100vw;
 	z-index:999;
 
 	#neon {
 		animation:glow 3s infinite alternate @cubic-bezier-3;
 		display:flex;
-		font-size:18vw;
+		font-size:14em;
 		font-weight:@font-weight-black;
 		justify-content:center;
-		letter-spacing:-3vw;
+		letter-spacing:-0.15em;
 		text-shadow:0 0 3px var(--main-bg-color), 0 0 6px var(--main-bg-color), 0 0 9px var(--main-bg-color);
 		line-height:1;
 		margin:0;
+		margin-left:-10vw;
 		z-index:2;
+
+		@media (min-width:56em) {
+			font-size:18vw;
+			letter-spacing:-3vw;
+		}
 
 		i {
 			display:block;
