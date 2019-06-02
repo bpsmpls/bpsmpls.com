@@ -4,7 +4,6 @@
 #about {
 	align-items:center;
 	background:desaturate(#032953, 60%);
-	//background:var(--main-text-color);
 	color:var(--main-bg-color);
 	display:flex;
 	justify-content:center;
@@ -12,16 +11,13 @@
 	padding:0;
 
 	.grid {
-		display:grid;
 		font-size:0.85em;
-		grid-gap:4vw;
-		grid-template-columns:30% 1fr;
 		padding:4vw;
 
 		figure {
 			grid-column:1;
 			grid-row:2;
-			margin:0;
+			margin:0 0 1em;
 
 			img {
 				display:block;
@@ -29,11 +25,17 @@
 			}
 		}
 
+		@media (min-width:40em) {
+			display:grid;
+			grid-gap:4vw;
+			grid-template-columns:30% 1fr;
+		}
+
 		.heading {
 			align-self:start;
 			grid-column:1 e('/') 3;
 			grid-row:1;
-			font:400 6vw/1.2 @font-family-serif;
+			font:400 4em/1.2 @font-family-serif;
 			letter-spacing:0.05em;
 			margin:0;
 			text-align:center;
@@ -41,18 +43,33 @@
 
 			small {
 				display:block;
-				font:500 1.25vw/1 @font-family-sans;
+				font:500 0.22em/1 @font-family-sans;
 				letter-spacing:0.3em;
 				margin-bottom:-1.25vw;
 				text-transform:uppercase;
 			}
 			
 			@supports (-webkit-background-clip:text) {
-				background:url('../media/images/bps.jpg') 90% 41% no-repeat;
-				background-size:300%;
+				background:url('../media/images/bps.jpg') 83% 39% no-repeat;
+				background-size:400%;
 				-webkit-background-clip:text;
 				background-clip:text;
 				color:transparent;
+			}
+
+			@media (min-width:50em) {
+				font:400 6vw/1.2 @font-family-serif;
+
+				small {
+					font:500 1.25vw/1 @font-family-sans;
+				}
+				@supports (-webkit-background-clip:text) {
+					background:url('../media/images/bps.jpg') 90% 41% no-repeat;
+					background-size:300%;
+					-webkit-background-clip:text;
+					background-clip:text;
+					color:transparent;
+				}
 			}
 		}
 
