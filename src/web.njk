@@ -1,0 +1,27 @@
+{# Web template #}
+
+{% extends "templates/_layout.njk" %}
+{% set pageTitle = 'UX and front-end development work of Brandon Patrick Sullivan' %}
+{% set description = '' %}
+{% set pageID = "web" %}
+
+{% block content %}
+	<header>
+		<h3 class="subheading">Work</h3>
+		<h2 class="heading">Web</h2>
+	</header>
+
+	{% include "web/surly.njk" %}
+	{% include "web/teravail.njk" %}
+	{% include "web/issi.njk" %}
+	{% include "web/ketl.njk" %}
+	{% include "web/whisky.njk" %}
+	{% include "web/salsa.njk" %}
+	{% include "web/heller.njk" %}
+	{% include "web/novvaa.njk" %}
+	{% include "web/thedecayedrealms.njk" %}
+
+	<footer>
+		<p>For a glimpse into ongoing projects and experiments, <a href="https://codepen.io/bpsmpls/" target="_blank">visit me on Codepen</a>.</p>
+	</footer>
+{% endblock %}

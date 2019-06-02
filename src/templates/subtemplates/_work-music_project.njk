@@ -1,0 +1,15 @@
+<li id="{{ workID }}" class="music-project">
+	<figure>
+		<img src="assets/media/images/music/projects/{{ workThumb }}" alt="{{ workThumbAlt }}">
+	</figure>
+	<header>
+		<h4 class="title">{{ workTitle|safe }}</h4>
+	</header>
+	<div class="description t-justify">
+		{% block workDescription %}
+		{% endblock %}
+	</div>
+	<footer>
+		<a href="{{ workUrl }}">{{ workUrlStripped }}</a>
+	</footer>
+</li>

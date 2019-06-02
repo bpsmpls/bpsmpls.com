@@ -1,0 +1,32 @@
+{# About template #}
+
+{% extends "templates/_layout.njk" %}
+{% set pageTitle = 'About Brandon Patrick Sullivan' %}
+{% set description = '' %}
+{% set pageID = "about" %}
+
+{% block content %}
+	<div class="grid">
+		<figure>
+			<img src="assets/media/images/bps.jpg" alt="Portrait of Brandon Patrick Sullivan">
+		</figure>
+
+		<h2 class="heading"><small>Digital work from</small> Minneapolis</h2>
+
+		<div class="description">
+			<div class="statement">
+				<p>With over a decade of experience in design, front-end development, video editing, and audio engineering, I'm looking for stimulating projects. From the off-handed experiment to the full team collaborative production, I'm flexible to any project.</p>
+
+				<p>I focus heavily on interaction design and user experience design, drawing from research and utilizing evidence-based tactics to create an expressive product. Beginning with user personas, wireframes, and storyboards, my solutions are carefully crafted to suit the needs of the project, iterating quickly and collaboratively with every review.</p>
+
+				<p>All of my work is drafted in W3C-compliant HTML, CSS, and JavaScript. I have experience building out customized control panels for content management systems like Craft CMS, ExpressionEngine, and WordPress, customizing each aspect to suit the needs of the editing team. I am ever excited about new technologies in the web that mark big strides in efficiency and engagement and am persistent in seeking new challenges.</p>
+
+				<p>In addition to my design and development work, I have a long history of prolific music recording. With over 20 major releases over the past 12 years, I've found home in both collaborative projects as well as individual pursuits. I'm a multi-instrumentalist with a portable studio setup, ideal for use anywhere from a dedicated recording space to the back of a moving cargo bike (it's happened).</p>
+
+				<p>Finally, I produce videos with mild regularity for myself and for hire, often centered around cycling or other action sports. As of 2018, I have a vlog alongside my produced videos, shot into the void but still making echoes.</p>
+			</div>
+
+			<footer>&mdash; Brandon Patrick Sullivan</footer>
+		</div>
+	</div>
+{% endblock %}

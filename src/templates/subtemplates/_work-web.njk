@@ -1,0 +1,34 @@
+<article id="{{ workID }}" class="work web">
+	<div class="examples">
+		<figure>
+			<img src="{{ desktopImg1 }}" alt="{{ desktopImg1Alt|safe }}" class="desktop">
+			<!-- lynnandtonic.com-like morphing between examples -->
+			<img src="{{ tabletImg1 }}" alt="{{ tabletImg1Alt|safe }}" class="tablet">
+			<img src="{{ mobileImg1 }}" alt="{{ mobileImg1Alt|safe }}" class="mobile">
+		</figure>
+
+		{% if desktopImg2 and tabletImg2 and mobileImg2 %}
+		<figure>
+			<img src="{{ desktopImg2 }}" alt="{{ desktopImg2Alt|safe }}" class="desktop">
+			<!-- lynnandtonic.com-like morphing between examples -->
+			<img src="{{ tabletImg2 }}" alt="{{ tabletImg2Alt|safe }}" class="tablet">
+			<img src="{{ mobileImg2 }}" alt="{{ mobileImg2Alt|safe }}" class="mobile">
+		</figure>
+		{% endif %}
+	</div>
+
+	<div class="info">
+		<h2 class="title">{{ workTitle|safe }}</h2>
+		<div class="description t-justify">
+			{% block workDescription %}
+			{% endblock %}
+		</div>
+		<div class="roles">
+			<ul>
+				{% for role in roles %}
+				<li>{{ role }}</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+</article>

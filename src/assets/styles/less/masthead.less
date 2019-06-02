@@ -1,0 +1,53 @@
+// Section: Heading
+// --------------------
+
+header#masthead {
+	align-items:center;
+	//background:#f4ff47;
+	border-bottom:1px solid @gray;
+	background:var(--main-bg-color);
+	//background-size:cover;
+	//color:var(--main-bg-color);
+	display:flex;
+	padding:0 2vw;
+	flex-flow:row nowrap;
+	justify-content:space-between;
+	width:100vw;
+	z-index:999;
+
+	// layout
+	a.site-title {}
+	nav          {}
+
+	a {
+		color:@black;
+	}
+
+	a.site-title {
+		position:relative;
+
+	}
+
+	nav {
+		ol {
+			display:flex;
+			list-style:none;
+			margin:0;
+			padding:0;
+			justify-content:flex-end;
+		}
+		li {
+			margin-left:1em;
+			text-transform:uppercase;
+		}
+		a {
+			display:block;
+			font:300 0.875em/1 @font-family-sans;
+			padding:1em 0;
+
+			&.active {
+				color:@red;
+			}
+		}
+	}
+}
