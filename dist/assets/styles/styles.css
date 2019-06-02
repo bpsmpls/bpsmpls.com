@@ -281,7 +281,7 @@ header#masthead nav a {
   display: block;
   font: 300 0.875em/1 'Open Sans', Helvetica, sans-serif;
   overflow: hidden;
-  padding: 1em 0;
+  padding: 1em 0 0.75em;
   position: relative;
 }
 header#masthead nav a:before {
