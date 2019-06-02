@@ -205,22 +205,22 @@ a.highlighter:hover:after {
   opacity: 1;
   width: calc(100% + 0.5em);
 }
-section {
+main {
   padding: 4vw 4vw 16vw;
 }
-section header {
+main header {
   text-align: center;
 }
-section header .heading {
+main header .heading {
   font: 4em/1 'Otama', 'Bodoni', serif;
 }
-section header .subheading {
+main header .subheading {
   font: 400 0.625em/1rem 'Open Sans', Helvetica, sans-serif;
   letter-spacing: 0.2em;
   text-transform: uppercase;
 }
-section header .subheading:before,
-section header .subheading:after {
+main header .subheading:before,
+main header .subheading:after {
   border-top: 1px solid var(--main-text-color);
   content: '';
   display: inline-block;
@@ -228,10 +228,10 @@ section header .subheading:after {
   width: 3vw;
 }
 @media (min-width: 60em) {
-  section header .heading {
+  main header .heading {
     font: 5vw/1 'Otama', 'Bodoni', serif;
   }
-  section header .subheading {
+  main header .subheading {
     font: 400 1vw/1rem 'Open Sans', Helvetica, sans-serif;
   }
 }

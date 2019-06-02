@@ -7,11 +7,9 @@
     <div id="page">
         {% include "../templates/includes/shared/_masthead.njk" %}
 
-        <main>
-            <section id="{{ pageID }}">
-                {% block content %}
-                {% endblock %}
-            </section>
+        <main id="{{ pageID }}">
+            {% block content %}
+            {% endblock %}
         </main>
 
         {% include "../templates/includes/shared/_footer.njk" %}
