@@ -337,7 +337,7 @@ header#masthead nav a.active:before {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  max-height: 95vh;
+  min-height: 83vh;
   width: 100vw;
   z-index: 999;
 }
