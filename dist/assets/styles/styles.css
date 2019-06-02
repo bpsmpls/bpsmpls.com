@@ -511,7 +511,6 @@ header#masthead nav a.active {
   grid-gap: 3vw;
 }
 .work.web .examples figure img {
-  border: 0.35vw solid var(--main-bg-color);
   display: block;
   max-width: 100%;
 }
@@ -520,6 +519,7 @@ header#masthead nav a.active {
 }
 .work.web .examples img {
   grid-row: 1;
+  box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.5);
 }
 .work.web .examples .desktop {
   border: 0;
@@ -543,6 +543,9 @@ header#masthead nav a.active {
   width: 30vw;
 }
 @media (min-width: 75rem) {
+}
+.work.web#novvaa img {
+  border: 1px solid #333;
 }
 .work.video {
   margin: 10vw 0;
