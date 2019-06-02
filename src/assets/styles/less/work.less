@@ -2,8 +2,7 @@
 // --------------------------------------------------
 
 .work {
-	align-items:center;
-	display:flex;
+	margin-bottom:15vw;
 
 	figure {
 		img {
@@ -17,11 +16,9 @@
 
 	.info {
 		display:grid;
-		grid-template-areas:'title title'
-							'description roles';
-		grid-template-columns:2fr 1fr;
-		grid-template-rows:auto 1fr;
-		grid-gap:2vw 4vw;
+		grid-gap:2vw;
+		grid-template-areas:'title''description''roles';
+		grid-template-rows:auto 1fr 1fr;
 		justify-content:center;
 	}
 	.title {
@@ -37,12 +34,13 @@
 		font-size:0.825em;
 		grid-area:description;
 		line-height:1.4;
+		margin:0 0 1em;
 	}
 	.roles {
 		color:@gray-light;
 		font:@font-weight-bold 0.75em/1 @font-family-sans;
 		grid-area:roles;
-		letter-spacing:0.1em;
+		letter-spacing:0.05em;
 		text-transform:uppercase;
 		
 		ul {
@@ -66,12 +64,38 @@
 		}
 	}
 
-	&.web {
-		margin-bottom:20vw;
+	@media (min-width:34em) {
+		.info {
+			grid-gap:2vw 4vw;
+			grid-template-areas:'title title'
+								'description roles';
+		}
+	}
 
+	@media (min-width:40em) {
+		align-items:start;
+		display:grid;
+		grid-template-columns:3fr 2fr;
+		grid-gap:4vw;
+
+		.info {
+			grid-template-areas:'title''description''roles';
+		}
+	}
+
+	@media (min-width:61em) {
+		//align-items:center;
+		grid-template-columns:7fr 3fr;
+
+		.info { 
+			padding-top:2vw;
+		}
+	}
+
+	// Specific to WEB projets
+	&.web {
 		.examples {
-			padding:0 0 4vw;
-			width:70vw;
+			padding:0 0 7vw;
 
 			figure {
 				align-items:end;
@@ -107,24 +131,7 @@
 				margin-bottom:-3vw;
 			}
 		}
-		.info {
-			margin-top:-6vw;
-			padding:4vw;
-			display:grid;
-			grid-template-areas:'title''description''roles';
-			grid-template-columns:1fr;
-			grid-gap:2vw;
-			width:30vw;
-
-			@media (min-width:75rem) {
-				//grid-template-columns:28rem 14rem;
-				//grid-gap:0 4vw;
-			}
-		}
-		.description {
-			// columns:2 15em;
-			// column-gap:4vw;	
-		}
+		
 		&#novvaa {
 			img {
 				border:1px solid @gray-dark;
@@ -132,12 +139,15 @@
 		}
 	}
 
+	// Specific to VIDEO projects
 	&.video {
-		margin:10vw 0;
+		@box-shadow-y-offset:8px;
+		@box-shadow-spread:8px;
+		@box-shadow-inset:15px;
 
-		@box-shadow-y-offset:4px;
-		@box-shadow-spread:4px;
-		@box-shadow-inset:10px;
+		figure {
+			margin:0 0 1em;
+		}
 
 		img {
 			box-shadow:0 @box-shadow-y-offset @box-shadow-spread (@box-shadow-spread * -1) rgba(0,0,0,0.5);
@@ -152,6 +162,8 @@
 			cursor:pointer;
 			height:7vw;
 			left:50%;
+			min-height:4em;
+			min-width:4em;
 			opacity:0.9;
 			position:absolute;
 			top:50%;
@@ -164,6 +176,8 @@
 				content:'';
 				height:2vw;
 				left:50%;
+				min-height:1em;
+				min-width:1.5em;
 				position:absolute;
 				top:50%;
 				width:3vw;
@@ -173,30 +187,22 @@
 			}
 		}
 
-		.thumb:hover {
-			img {
-				box-shadow:0 (@box-shadow-y-offset + @box-shadow-inset/2) (@box-shadow-spread * 2) (@box-shadow-inset * -1) rgba(0,0,0,0.3);
-				.transform(scale(1.05));
-			}
-			.play-btn {
-				.transform(translate(-50%, -50%) scale(1.2));
+		@media (hover: hover) {
+			.thumb:hover {
+				img {
+					box-shadow:0 (@box-shadow-y-offset + @box-shadow-inset/2) (@box-shadow-spread * 2) (@box-shadow-inset * -1) rgba(0,0,0,0.3);
+					.transform(scale(1.05));
+				}
+				.play-btn {
+					.transform(translate(-50%, -50%) scale(1.2));
 
-				&:before {
-					.clip-path(polygon(50% 0, 50% 0, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 0 100%, 0 100%));
-					height:3vw;
-					.transform(translate(-45%,-50%) rotate(90deg));
+					&:before {
+						.clip-path(polygon(50% 0, 50% 0, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 0 100%, 0 100%));
+						height:3vw;
+						.transform(translate(-45%,-50%) rotate(90deg));
+					}
 				}
 			}
-		}
-
-		figure {
-			margin-right:4vw;
-			width:50vw;
-		}
-
-		.info {
-			margin-top:-4vw;
-			width:46vw;
 		}
 	}
 }
