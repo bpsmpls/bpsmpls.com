@@ -11,7 +11,7 @@ header#masthead {
 	display:flex;
 	padding:0 2vw;
 	flex-flow:row nowrap;
-	justify-content:space-between;
+	justify-content:center;
 	width:100vw;
 	z-index:999;
 
@@ -29,8 +29,7 @@ header#masthead {
 	}
 
 	a.site-title {
-		position:relative;
-
+		text-indent:-999em;
 	}
 
 	nav {
@@ -74,6 +73,14 @@ header#masthead {
 					bottom:0;
 				}
 			}
+		}
+	}
+
+	@media (min-width:30em) {
+		justify-content:space-between;
+
+		a.site-title {
+			text-indent:0;
 		}
 	}
 }

@@ -252,7 +252,7 @@ header#masthead {
   display: flex;
   padding: 0 2vw;
   flex-flow: row nowrap;
-  justify-content: space-between;
+  justify-content: center;
   width: 100vw;
   z-index: 999;
 }
@@ -264,7 +264,7 @@ header#masthead a:hover {
   background: none;
 }
 header#masthead a.site-title {
-  position: relative;
+  text-indent: -999em;
 }
 header#masthead nav ol {
   display: flex;
@@ -305,6 +305,14 @@ header#masthead nav a:focus:before,
 header#masthead nav a:active:before,
 header#masthead nav a.active:before {
   bottom: 0;
+}
+@media (min-width: 30em) {
+  header#masthead {
+    justify-content: space-between;
+  }
+  header#masthead a.site-title {
+    text-indent: 0;
+  }
 }
 #colophon {
   padding: 2vw 1vw;
