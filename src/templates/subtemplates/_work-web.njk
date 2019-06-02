@@ -22,6 +22,10 @@
 		<div class="description t-justify">
 			{% block workDescription %}
 			{% endblock %}
+			
+			{% if websiteUrl %}
+			<a href="{{websiteUrl}}" class="highlighter" target="_blank">View Website</a>
+			{% endif %}
 		</div>
 		<div class="roles">
 			<ul>

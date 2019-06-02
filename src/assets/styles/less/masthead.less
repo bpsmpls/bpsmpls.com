@@ -20,7 +20,12 @@ header#masthead {
 	nav          {}
 
 	a {
+		border:none;
 		color:@black;
+
+		&:hover {
+			background:none;
+		}
 	}
 
 	a.site-title {
@@ -43,10 +48,31 @@ header#masthead {
 		a {
 			display:block;
 			font:300 0.875em/1 @font-family-sans;
+			overflow:hidden;
 			padding:1em 0;
+			position:relative;
 
+			&:before {
+				@size:3px;
+				background:@red;
+				bottom:(@size * -1);
+				content:' ';
+				display:block;
+				height:@size;
+				position:absolute;
+				transition:bottom 0.1s ease-out;
+				width:100%;
+			}
+
+			&:hover,
+			&:focus,
+			&:active,
 			&.active {
 				color:@red;
+					
+				&:before {
+					bottom:0;
+				}
 			}
 		}
 	}

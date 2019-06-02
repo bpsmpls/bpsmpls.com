@@ -153,30 +153,37 @@ body {
   font: 400 1em/1.5 'Open Sans', Helvetica, sans-serif;
 }
 a {
-  text-decoration: none;
-}
-main a {
+  border-bottom: 1px solid #ff6347;
   color: #000;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+a:hover {
+  background: rgba(255, 99, 71, 0.75);
+  border-color: transparent;
+  color: #fff;
+}
+a.highlighter {
   display: inline-block;
   position: relative;
   text-decoration: none;
   transition: 0.3s;
   transition-delay: 0.1s;
 }
-main a:before,
-main a:after {
+a.highlighter:before,
+a.highlighter:after {
   content: ' ';
   position: absolute;
   z-index: -1;
 }
-main a:before {
+a.highlighter:before {
   border-bottom: 1px solid #ff6347;
   left: -0.125em;
   top: 100%;
   transition: 0.1s;
   width: calc(100% + 0.25em);
 }
-main a:after {
+a.highlighter:after {
   height: 1.5em;
   display: block;
   left: -0.25em;
@@ -186,13 +193,14 @@ main a:after {
   -webkit-clip-path: polygon(2% 0, 100% 0, 98% 100%, 0 100%);
   clip-path: polygon(2% 0, 100% 0, 98% 100%, 0 100%);
 }
-main a:hover {
+a.highlighter:hover {
+  background: none;
   color: #fff;
 }
-main a:hover:before {
+a.highlighter:hover:before {
   left: -0.25em;
 }
-main a:hover:after {
+a.highlighter:hover:after {
   background: rgba(255, 99, 71, 0.75);
   opacity: 1;
   width: calc(100% + 0.5em);
@@ -223,6 +231,9 @@ section header .subheading:after {
 p:last-child {
   margin: 0;
 }
+footer p {
+  text-align: center;
+}
 .t-center {
   text-align: center;
 }
@@ -246,7 +257,11 @@ header#masthead {
   z-index: 999;
 }
 header#masthead a {
+  border: none;
   color: #000;
+}
+header#masthead a:hover {
+  background: none;
 }
 header#masthead a.site-title {
   position: relative;
@@ -265,10 +280,31 @@ header#masthead nav li {
 header#masthead nav a {
   display: block;
   font: 300 0.875em/1 'Open Sans', Helvetica, sans-serif;
+  overflow: hidden;
   padding: 1em 0;
+  position: relative;
 }
+header#masthead nav a:before {
+  background: #ff6347;
+  bottom: -3px;
+  content: ' ';
+  display: block;
+  height: 3px;
+  position: absolute;
+  transition: bottom 0.1s ease-out;
+  width: 100%;
+}
+header#masthead nav a:hover,
+header#masthead nav a:focus,
+header#masthead nav a:active,
 header#masthead nav a.active {
   color: #ff6347;
+}
+header#masthead nav a:hover:before,
+header#masthead nav a:focus:before,
+header#masthead nav a:active:before,
+header#masthead nav a.active:before {
+  bottom: 0;
 }
 #colophon {
   padding: 2vw 1vw;
