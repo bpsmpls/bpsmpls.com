@@ -11,13 +11,9 @@ header#masthead {
 	display:flex;
 	padding:0 2vw;
 	flex-flow:row nowrap;
-	justify-content:center;
+	justify-content:space-between;
 	width:100vw;
 	z-index:999;
-
-	// layout
-	a.site-title {}
-	nav          {}
 
 	a {
 		border:none;
@@ -29,7 +25,8 @@ header#masthead {
 	}
 
 	a.site-title {
-		text-indent:-999em;
+		.initials  { display:block; }
+		.full-name { display:none;  }
 	}
 
 	nav {
@@ -77,10 +74,9 @@ header#masthead {
 	}
 
 	@media (min-width:30em) {
-		justify-content:space-between;
-
 		a.site-title {
-			text-indent:0;
+			.initials  { display:none;  }
+			.full-name { display:block; }
 		}
 	}
 }
