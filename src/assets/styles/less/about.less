@@ -49,11 +49,13 @@
 				text-transform:uppercase;
 			}
 			
-			@supports (-webkit-background-clip:text) {
-				background:url('../media/images/bps.jpg') 83% 39% no-repeat;
-				background-size:400%;
+			@supports (background-clip:text) or (-webkit-background-clip:text) {
 				-webkit-background-clip:text;
 				background-clip:text;
+				background-image:url('../media/images/bps.jpg');
+				background-position:83% 39%;
+				background-repeat:no-repeat;
+				// background-size:400%;
 				color:transparent;
 			}
 
@@ -63,12 +65,9 @@
 				small {
 					font:500 1.25vw/1 @font-family-sans;
 				}
-				@supports (-webkit-background-clip:text) {
-					background:url('../media/images/bps.jpg') 90% 41% no-repeat;
-					background-size:300%;
-					-webkit-background-clip:text;
-					background-clip:text;
-					color:transparent;
+				@supports (background-clip:text) or (-webkit-background-clip:text) {
+					background-position:90% 41%;
+					// background-size:300%;
 				}
 			}
 		}
