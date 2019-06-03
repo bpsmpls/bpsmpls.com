@@ -10,6 +10,7 @@
  * @usage gulp optimize
  */
 
+import chmod from 'gulp-chmod';
 import gulp from 'gulp';
 import gulpIf from 'gulp-if';
 import imagemin from 'gulp-imagemin';
@@ -39,5 +40,6 @@ export default function resizeWebWork() {
             withMetadata: false
         }))
         .pipe(imagemin())
+        .pipe(chmod(0o644))
         .pipe(gulp.dest(`${process.env.DIRECTORY_DEST}/assets/media/images/web/`));
 }
