@@ -14,8 +14,14 @@ import gulp from 'gulp';
 import imagemin from 'gulp-imagemin';
 
 export default function optimize() {
+    const src = [
+        `${process.env.DIRECTORY_SRC}/assets/media/images/**/*.+(png|jpg|gif)`,
+        `!${process.env.DIRECTORY_SRC}/assets/media/images/web/**/*`,
+        `!${process.env.DIRECTORY_SRC}/assets/media/images/music/releases/*`
+    ];
+        
     return gulp
-        .src(`${process.env.DIRECTORY_SRC}/assets/media/images/**/*.+(png|jpg|gif|svg)`)
+        .src(src)
         .pipe(imagemin([
             imagemin.gifsicle({ interlaced: true }),
             imagemin.jpegtran({ progressive: true }),
