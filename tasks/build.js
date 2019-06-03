@@ -19,7 +19,7 @@ export default function build(done) {
     return runSequence(
         'clean',
         ['media', 'optimize'],
-        ['markup', 'resizeMusicReleases', 'resizeWebWork', 'serversettings', 'styles', 'scripts', 'vendor'],
+        ['markup', 'resizeMusicReleases', 'resizeWebWork', 'serversettings', 'styles'],
         () => {
             process.env.watchStarted = true;
             done();
