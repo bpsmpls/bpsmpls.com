@@ -18,12 +18,14 @@ function watchMedia() {
 
 function buildMedia() {
     const browser = browserSync.get('local');
+    const src = [
+        `${process.env.DIRECTORY_SRC}/assets/media/**/*`,
+        `!${process.env.DIRECTORY_SRC}/assets/media/favicon/_src`,
+        `!${process.env.DIRECTORY_SRC}/assets/media/favicon/_src/**`,
+    ];
 
     return gulp
-        .src(
-            `${process.env.DIRECTORY_SRC}/assets/media/**/*`,
-            { base: process.env.DIRECTORY_SRC }
-        )
+        .src(src, { base: process.env.DIRECTORY_SRC })
         .pipe(notify.onError('MEDIA: error'))
         .pipe(chmod(0o644))
         .pipe(gulp.dest(process.env.DIRECTORY_DEST))
