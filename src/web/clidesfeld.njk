@@ -3,20 +3,6 @@
 
 {% set workID = 'clidesfeld' %}
 
-{% set desktopImg1 = 'assets/media/images/web/Clidesfeld/homepage_lg.jpg' %}
-{% set desktopImg1Alt = 'Clidesfeld Website, desktop example 1' %}
-{% set tabletImg1 = 'assets/media/images/web/Clidesfeld/homepage_md.jpg' %}
-{% set tabletImg1Alt = 'Clidesfeld Website, tablet example 1' %}
-{% set mobileImg1 = 'assets/media/images/web/Clidesfeld/homepage_sm.jpg' %}
-{% set mobileImg1Alt = 'Clidesfeld Website, mobile example 1' %}
-
-{% set desktopImg2 = 'assets/media/images/web/Clidesfeld/music_lg.jpg' %}
-{% set desktopImg2Alt = 'Clidesfeld Website, desktop example 2' %}
-{% set tabletImg2 = 'assets/media/images/web/Clidesfeld/music_md.jpg' %}
-{% set tabletImg2Alt = 'Clidesfeld Website, tablet example 2' %}
-{% set mobileImg2 = 'assets/media/images/web/Clidesfeld/music_sm.jpg' %}
-{% set mobileImg2Alt = 'Clidesfeld Website, mobile example 2' %}
-
 {% set workTitle = 'Clidesfeld' %}
 
 {% block workDescription %}
@@ -26,3 +12,43 @@
 {% set websiteUrl = 'http://clidesfeld.com/' %}
 
 {% set roles = ['User experience design','Web design','Front-end development','CMS customization'] %}
+
+{% set workImagePath = 'assets/media/images/web/Clidesfeld' %}
+
+{% set workImages = [
+	{
+		'desktop' : {
+			'imgName': 'homepage_desktop',
+			'imgExtension': '.jpg',
+			'altText': 'Clidesfeld Website, desktop example 1'
+		},
+		'tablet' : {
+			'imgName': 'homepage_tablet',
+			'imgExtension': '.jpg',
+			'altText': 'Clidesfeld Website, tablet example 1'
+		},
+		'mobile' : {
+			'imgName': 'homepage_mobile',
+			'imgExtension': '.jpg',
+			'altText': 'Clidesfeld Website, mobile example 1'
+		}
+	},
+	{
+		'desktop': {
+			'imgName': 'music_desktop',
+			'imgExtension': '.jpg',
+			'altText': 'Clidesfeld Website, desktop example 2'
+		},
+		'tablet': {
+			'imgName': 'music_tablet',
+			'imgExtension': '.jpg',
+			'altText': 'Clidesfeld Website, tablet example 2'
+		},
+		'mobile': {
+			'imgName': 'music_mobile',
+			'imgExtension': '.jpg',
+			'altText': 'Clidesfeld Website, mobile example 2'
+		}
+	}
+]
+%}

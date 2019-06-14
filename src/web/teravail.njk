@@ -3,20 +3,6 @@
 
 {% set workID = 'teravail' %}
 
-{% set desktopImg1 = 'assets/media/images/web/Teravail/product-detail_lg.jpg' %}
-{% set desktopImg1Alt = 'Teravail website, desktop example' %}
-{% set tabletImg1 = 'assets/media/images/web/Teravail/product-detail_md.jpg' %}
-{% set tabletImg1Alt = 'Teravail website, tablet example' %}
-{% set mobileImg1 = 'assets/media/images/web/Teravail/product-detail_sm.jpg' %}
-{% set mobileImg1Alt = 'Teravail website, mobile example' %}
-
-{% set desktopImg2 = 'assets/media/images/web/Teravail/articles-landing_lg.jpg' %}
-{% set desktopImg2Alt = 'Teravail website, desktop example' %}
-{% set tabletImg2 = 'assets/media/images/web/Teravail/articles-landing_md.jpg' %}
-{% set tabletImg2Alt = 'Teravail website, tablet example' %}
-{% set mobileImg2 = 'assets/media/images/web/Teravail/articles-landing_sm.jpg' %}
-{% set mobileImg2Alt = 'Teravail website, mobile example' %}
-
 {% set workTitle = 'Teravail Tires' %}
 
 {% block workDescription %}
@@ -26,3 +12,43 @@
 {% set websiteUrl = 'https://teravail.com/' %}
 
 {% set roles = ['Digital strategy','Wireframing','User experience design','Front-end development','CMS customization'] %}
+
+{% set workImagePath = 'assets/media/images/web/Teravail' %}
+
+{% set workImages = [
+	{
+		'desktop' : {
+			'imgName': 'product-detail_desktop',
+			'imgExtension': '.jpg',
+			'altText': 'Teravail Website, desktop example 1'
+		},
+		'tablet' : {
+			'imgName': 'product-detail_tablet',
+			'imgExtension': '.jpg',
+			'altText': 'Teravail Website, tablet example 1'
+		},
+		'mobile' : {
+			'imgName': 'product-detail_mobile',
+			'imgExtension': '.jpg',
+			'altText': 'Teravail Website, mobile example 1'
+		}
+	},
+	{
+		'desktop': {
+			'imgName': 'articles-landing_desktop',
+			'imgExtension': '.jpg',
+			'altText': 'Teravail Website, desktop example 2'
+		},
+		'tablet': {
+			'imgName': 'articles-landing_tablet',
+			'imgExtension': '.jpg',
+			'altText': 'Teravail Website, tablet example 2'
+		},
+		'mobile': {
+			'imgName': 'articles-landing_mobile',
+			'imgExtension': '.jpg',
+			'altText': 'Teravail Website, mobile example 2'
+		}
+	}
+]
+%}

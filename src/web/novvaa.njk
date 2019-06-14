@@ -3,20 +3,6 @@
 
 {% set workID = 'novvaa' %}
 
-{% set desktopImg1 = 'assets/media/images/web/Novvaa/homepage_lg.jpg' %}
-{% set desktopImg1Alt = 'Novvaa Website, desktop example 1' %}
-{% set tabletImg1 = 'assets/media/images/web/Novvaa/homepage_md.jpg' %}
-{% set tabletImg1Alt = 'Novvaa Website, tablet example 1' %}
-{% set mobileImg1 = 'assets/media/images/web/Novvaa/homepage_sm.jpg' %}
-{% set mobileImg1Alt = 'Novvaa Website, mobile example 1' %}
-
-{% set desktopImg1 = 'assets/media/images/web/Novvaa/gigs_lg.jpg' %}
-{% set desktopImg2Alt = 'Novvaa Website, desktop example 2' %}
-{% set tabletImg1 = 'assets/media/images/web/Novvaa/gigs_md.jpg' %}
-{% set tabletImg2Alt = 'Novvaa Website, tablet example 2' %}
-{% set mobileImg1 = 'assets/media/images/web/Novvaa/gigs_sm.jpg' %}
-{% set mobileImg2Alt = 'Novvaa Website, mobile example 2' %}
-
 {% set workTitle = 'Novvaa' %}
 
 {% block workDescription %}
@@ -26,3 +12,43 @@
 {% set websiteUrl = 'https://novvaamusic.com/' %}
 
 {% set roles = ['Digital strategy','Wireframing','User experience design','Web design','Front-end development','CMS customization'] %}
+
+{% set workImagePath = 'assets/media/images/web/Novvaa' %}
+
+{% set workImages = [
+	{
+		'desktop' : {
+			'imgName': 'homepage_desktop',
+			'imgExtension': '.jpg',
+			'altText': 'Novvaa Website, desktop example 1'
+		},
+		'tablet' : {
+			'imgName': 'homepage_tablet',
+			'imgExtension': '.jpg',
+			'altText': 'Novvaa Website, tablet example 1'
+		},
+		'mobile' : {
+			'imgName': 'homepage_mobile',
+			'imgExtension': '.jpg',
+			'altText': 'Novvaa Website, mobile example 1'
+		}
+	},
+	{
+		'desktop': {
+			'imgName': 'gigs_desktop',
+			'imgExtension': '.jpg',
+			'altText': 'Novvaa Website, desktop example 2'
+		},
+		'tablet': {
+			'imgName': 'gigs_tablet',
+			'imgExtension': '.jpg',
+			'altText': 'Novvaa Website, tablet example 2'
+		},
+		'mobile': {
+			'imgName': 'gigs_mobile',
+			'imgExtension': '.jpg',
+			'altText': 'Novvaa Website, mobile example 2'
+		}
+	}
+]
+%}

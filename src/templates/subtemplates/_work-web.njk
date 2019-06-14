@@ -1,20 +1,42 @@
 <article id="{{ workID }}" class="work web">
 	<div class="examples">
-		<figure>
-			<img src="{{ desktopImg1 }}" alt="{{ desktopImg1Alt|safe }}" class="desktop">
-			<!-- lynnandtonic.com-like morphing between examples -->
-			<img src="{{ tabletImg1 }}" alt="{{ tabletImg1Alt|safe }}" class="tablet">
-			<img src="{{ mobileImg1 }}" alt="{{ mobileImg1Alt|safe }}" class="mobile">
-		</figure>
-
-		{% if desktopImg2 and tabletImg2 and mobileImg2 %}
-		<figure>
-			<img src="{{ desktopImg2 }}" alt="{{ desktopImg2Alt|safe }}" class="desktop">
-			<!-- lynnandtonic.com-like morphing between examples -->
-			<img src="{{ tabletImg2 }}" alt="{{ tabletImg2Alt|safe }}" class="tablet">
-			<img src="{{ mobileImg2 }}" alt="{{ mobileImg2Alt|safe }}" class="mobile">
-		</figure>
-		{% endif %}
+		{% for workImage in workImages %}
+			{# For now, only show the first set of images in the array. Multi-example gallery to come. #}
+			{% if loop.first %}
+				<figure>
+					<img 
+						srcset="{{ workImagePath }}/{{ workImage.desktop.imgName }}-1200{{ workImage.desktop.imgExtension }} 1200w,
+						        {{ workImagePath }}/{{ workImage.desktop.imgName }}-1000{{ workImage.desktop.imgExtension }} 1000w,
+						        {{ workImagePath }}/{{ workImage.desktop.imgName }}-800{{ workImage.desktop.imgExtension }} 800w,
+						        {{ workImagePath }}/{{ workImage.desktop.imgName }}-600{{ workImage.desktop.imgExtension }} 600w," 
+						sizes="(min-width:0em) 91vw,
+						       (min-width:40em) 60vw"
+						src="{{ workImagePath }}/{{ workImage.desktop.imgName }}-800{{ workImage.desktop.imgExtension }}" 
+						alt="{{ workImage.desktop.AltText|safe }}" 
+						class="desktop">
+					<img 
+						srcset="{{ workImagePath }}/{{ workImage.tablet.imgName }}-700{{ workImage.tablet.imgExtension }} 700w,
+						        {{ workImagePath }}/{{ workImage.tablet.imgName }}-583{{ workImage.tablet.imgExtension }} 583w,
+						        {{ workImagePath }}/{{ workImage.tablet.imgName }}-467{{ workImage.tablet.imgExtension }} 467w,
+						        {{ workImagePath }}/{{ workImage.tablet.imgName }}-350{{ workImage.tablet.imgExtension }} 350w," 
+						sizes="(min-width:0em) 30vw,
+						       (min-width:40em) 20vw" 
+						src="{{ workImagePath }}/{{ workImage.tablet.imgName }}-467{{ workImage.tablet.imgExtension }}" 
+						alt="{{ workImage.tablet.AltText|safe }}" 
+						class="tablet">
+					<img 
+						srcset="{{ workImagePath }}/{{ workImage.mobile.imgName }}-300{{ workImage.mobile.imgExtension }} 300w,
+						        {{ workImagePath }}/{{ workImage.mobile.imgName }}-250{{ workImage.mobile.imgExtension }} 250w,
+						        {{ workImagePath }}/{{ workImage.mobile.imgName }}-200{{ workImage.mobile.imgExtension }} 200w,
+						        {{ workImagePath }}/{{ workImage.mobile.imgName }}-150{{ workImage.mobile.imgExtension }} 150w," 
+						sizes="(min-width:0em) 15vw,
+						       (min-width:40em) 10vw" 
+						src="{{ workImagePath }}/{{ workImage.mobile.imgName }}-300{{ workImage.mobile.imgExtension }}" 
+						alt="{{ workImage.mobile.AltText|safe }}" 
+						class="mobile">
+				</figure>
+			{% endif %}
+		{% endfor %}
 	</div>
 
 	<div class="info">

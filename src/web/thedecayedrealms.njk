@@ -3,20 +3,6 @@
 
 {% set workID = 'tdr' %}
 
-{% set desktopImg1 = 'assets/media/images/web/TDR/about_lg.jpg' %}
-{% set desktopImg1Alt = 'The Decayed Realms Website, desktop example 1' %}
-{% set tabletImg1 = 'assets/media/images/web/TDR/about_md.jpg' %}
-{% set tabletImg1Alt = 'The Decayed Realms Website, tablet example 1' %}
-{% set mobileImg1 = 'assets/media/images/web/TDR/about_sm.jpg' %}
-{% set mobileImg1Alt = 'The Decayed Realms Website, mobile example 1' %}
-
-{% set desktopImg2 = 'assets/media/images/web/TDR/music_lg.jpg' %}
-{% set desktopImg2Alt = 'The Decayed Realms Website, desktop example 2' %}
-{% set tabletImg2 = 'assets/media/images/web/TDR/music_md.jpg' %}
-{% set tabletImg2Alt = 'The Decayed Realms Website, tablet example 2' %}
-{% set mobileImg2 = 'assets/media/images/web/TDR/music_sm.jpg' %}
-{% set mobileImg2Alt = 'The Decayed Realms Website, mobile example 2' %}
-
 {% set workTitle = 'The Decayed Realms' %}
 
 {% block workDescription %}
@@ -26,3 +12,43 @@
 {% set websiteUrl = 'http://thedecayedrealms.com/' %}
 
 {% set roles = ['Digital strategy','Wireframing','User experience design','Web design','Front-end development'] %}
+
+{% set workImagePath = 'assets/media/images/web/TDR' %}
+
+{% set workImages = [
+	{
+		'desktop' : {
+			'imgName': 'about_desktop',
+			'imgExtension': '.jpg',
+			'altText': 'The Decayed Realms Website, desktop example 1'
+		},
+		'tablet' : {
+			'imgName': 'about_tablet',
+			'imgExtension': '.jpg',
+			'altText': 'The Decayed Realms Website, tablet example 1'
+		},
+		'mobile' : {
+			'imgName': 'about_mobile',
+			'imgExtension': '.jpg',
+			'altText': 'The Decayed Realms Website, mobile example 1'
+		}
+	},
+	{
+		'desktop': {
+			'imgName': 'music_desktop',
+			'imgExtension': '.jpg',
+			'altText': 'The Decayed Realms Website, desktop example 2'
+		},
+		'tablet': {
+			'imgName': 'music_tablet',
+			'imgExtension': '.jpg',
+			'altText': 'The Decayed Realms Website, tablet example 2'
+		},
+		'mobile': {
+			'imgName': 'music_mobile',
+			'imgExtension': '.jpg',
+			'altText': 'The Decayed Realms Website, mobile example 2'
+		}
+	}
+]
+%}

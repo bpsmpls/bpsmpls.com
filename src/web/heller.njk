@@ -3,13 +3,6 @@
 
 {% set workID = 'heller' %}
 
-{% set desktopImg1 = 'assets/media/images/web/Heller/bikes-landing_lg.jpg' %}
-{% set desktopImg1Alt = 'Heller Bikes Website, desktop example' %}
-{% set tabletImg1 = 'assets/media/images/web/Heller/bikes-landing_md.jpg' %}
-{% set tabletImg1Alt = 'Heller Bikes Website, tablet example' %}
-{% set mobileImg1 = 'assets/media/images/web/Heller/bikes-landing_sm.jpg' %}
-{% set mobileImg1Alt = 'Heller Bikes Website, mobile example' %}
-
 {% set workTitle = 'Heller Bikes' %}
 
 {% block workDescription %}
@@ -19,3 +12,43 @@
 {% set websiteUrl = 'https://hellerbikes.com/' %}
 
 {% set roles = ['Digital strategy','Wireframing','User experience design','Front-end development','CMS customization'] %}
+
+{% set workImagePath = 'assets/media/images/web/Heller' %}
+
+{% set workImages = [
+	{
+		'desktop' : {
+			'imgName': 'bikes-landing_desktop'
+			'imgExtension': '.jpg',
+			'altText': 'Heller Bikes Website, desktop example'
+		},
+		'tablet' : {
+			'imgName': 'bikes-landing_tablet'
+			'imgExtension': '.jpg',
+			'altText': 'Heller Bikes Website, tablet example'
+		},
+		'mobile' : {
+			'imgName': 'bikes-landing_mobile'
+			'imgExtension': '.jpg',
+			'altText': 'Heller Bikes Website, mobile example'
+		}
+	},
+	{
+		'desktop' : {
+			'imgName': 'bike-detail_desktop'
+			'imgExtension': '.jpg',
+			'altText': 'Heller Bikes Website, desktop example'
+		},
+		'tablet' : {
+			'imgName': 'bike-detail_tablet'
+			'imgExtension': '.jpg',
+			'altText': 'Heller Bikes Website, tablet example'
+		},
+		'mobile' : {
+			'imgName': 'bike-detail_mobile'
+			'imgExtension': '.jpg',
+			'altText': 'Heller Bikes Website, mobile example'
+		}
+	}
+]
+%}

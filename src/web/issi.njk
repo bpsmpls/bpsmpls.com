@@ -3,20 +3,6 @@
 
 {% set workID = 'issi' %}
 
-{% set desktopImg1 = 'assets/media/images/web/iSSi/homepage_lg.jpg' %}
-{% set desktopImg1Alt = 'iSSi Pedals Website, desktop example' %}
-{% set tabletImg1 = 'assets/media/images/web/iSSi/homepage_md.jpg' %}
-{% set tabletImg1Alt = 'iSSi Pedals Website, tablet example' %}
-{% set mobileImg1 = 'assets/media/images/web/iSSi/homepage_sm.jpg' %}
-{% set mobileImg1Alt = 'iSSi Pedals Website, mobile example' %}
-
-{% set desktopImg2 = 'assets/media/images/web/iSSi/pedal-detail_lg.jpg' %}
-{% set desktopImg2Alt = 'iSSi Pedals Website, desktop example' %}
-{% set tabletImg2 = 'assets/media/images/web/iSSi/pedal-detail_md.jpg' %}
-{% set tabletImg2Alt = 'iSSi Pedals Website, tablet example' %}
-{% set mobileImg2 = 'assets/media/images/web/iSSi/pedal-detail_sm.jpg' %}
-{% set mobileImg2Alt = 'iSSi Pedals Website, mobile example' %}
-
 {% set workTitle = 'iSSi Pedals' %}
 
 {% block workDescription %}
@@ -26,3 +12,43 @@
 {% set websiteUrl = 'https://rideissi.com/' %}
 
 {% set roles = ['Project leadership','Digital strategy','Wireframing','User experience design','Web design','Front-end development','CMS customization'] %}
+
+{% set workImagePath = 'assets/media/images/web/iSSi' %}
+
+{% set workImages = [
+	{
+		'desktop' : {
+			'imgName': 'homepage_desktop',
+			'imgExtension': '.jpg',
+			'altText': 'iSSi Pedals Website, desktop example 1'
+		},
+		'tablet' : {
+			'imgName': 'homepage_tablet',
+			'imgExtension': '.jpg',
+			'altText': 'iSSi Pedals Website, tablet example 1'
+		},
+		'mobile' : {
+			'imgName': 'homepage_mobile',
+			'imgExtension': '.jpg',
+			'altText': 'iSSi Pedals Website, mobile example 1'
+		}
+	},
+	{
+		'desktop': {
+			'imgName': 'pedal-detail_desktop',
+			'imgExtension': '.jpg',
+			'altText': 'iSSi Pedals Website, desktop example 2'
+		},
+		'tablet': {
+			'imgName': 'pedal-detail_tablet',
+			'imgExtension': '.jpg',
+			'altText': 'iSSi Pedals Website, tablet example 2'
+		},
+		'mobile': {
+			'imgName': 'pedal-detail_mobile',
+			'imgExtension': '.jpg',
+			'altText': 'iSSi Pedals Website, mobile example 2'
+		}
+	}
+]
+%}

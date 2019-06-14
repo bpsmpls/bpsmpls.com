@@ -3,20 +3,6 @@
 
 {% set workID = 'salsa' %}
 
-{% set desktopImg1 = 'assets/media/images/web/Salsa/rof-home_lg.jpg' %}
-{% set desktopImg1Alt = 'Salsa Cycles Storysite Website, desktop example 1' %}
-{% set tabletImg1 = 'assets/media/images/web/Salsa/rof-home_md.jpg' %}
-{% set tabletImg1Alt = 'Salsa Cycles Storysite Website, tablet example 1' %}
-{% set mobileImg1 = 'assets/media/images/web/Salsa/rof-home_sm.jpg' %}
-{% set mobileImg1Alt = 'Salsa Cycles Storysite Website, mobile example 1' %}
-
-{% set desktopImg2 = 'assets/media/images/web/Salsa/rof-expedition_lg.jpg' %}
-{% set desktopImg2Alt = 'Salsa Cycles Storysite Website, desktop example 2' %}
-{% set tabletImg2 = 'assets/media/images/web/Salsa/rof-expedition_md.jpg' %}
-{% set tabletImg2Alt = 'Salsa Cycles Storysite Website, tablet example 2' %}
-{% set mobileImg2 = 'assets/media/images/web/Salsa/rof-expedition_sm.jpg' %}
-{% set mobileImg2Alt = 'Salsa Cycles Storysite Website, mobile example 2' %}
-
 {% set workTitle = 'Salsa Cycles: Storysites' %}
 
 {% block workDescription %}
@@ -26,3 +12,43 @@
 {% set websiteUrl = 'https://salsacycles.com/stories' %}
 
 {% set roles = ['Digital strategy','Wireframing','Front-end development','CMS customization'] %}
+
+{% set workImagePath = 'assets/media/images/web/Salsa' %}
+
+{% set workImages = [
+	{
+		'desktop' : {
+			'imgName': 'rof-home_desktop',
+			'imgExtension': '.jpg',
+			'altText': 'Salsa Cycles Storysite Website, desktop example 1'
+		},
+		'tablet' : {
+			'imgName': 'rof-home_tablet',
+			'imgExtension': '.jpg',
+			'altText': 'Salsa Cycles Storysite Website, tablet example 1'
+		},
+		'mobile' : {
+			'imgName': 'rof-home_mobile',
+			'imgExtension': '.jpg',
+			'altText': 'Salsa Cycles Storysite Website, mobile example 1'
+		}
+	},
+	{
+		'desktop': {
+			'imgName': 'rof-expedition_desktop',
+			'imgExtension': '.jpg',
+			'altText': 'Salsa Cycles Storysite Website, desktop example 2'
+		},
+		'tablet': {
+			'imgName': 'rof-expedition_tablet',
+			'imgExtension': '.jpg',
+			'altText': 'Salsa Cycles Storysite Website, tablet example 2'
+		},
+		'mobile': {
+			'imgName': 'rof-expedition_mobile',
+			'imgExtension': '.jpg',
+			'altText': 'Salsa Cycles Storysite Website, mobile example 2'
+		}
+	}
+]
+%}

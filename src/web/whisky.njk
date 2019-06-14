@@ -3,20 +3,6 @@
 
 {% set workID = 'whisky' %}
 
-{% set desktopImg1 = 'assets/media/images/web/Whisky/product-detail_lg.jpg' %}
-{% set desktopImg1Alt = 'Whisky Parts Co Website, desktop example' %}
-{% set tabletImg1 = 'assets/media/images/web/Whisky/product-detail_md.jpg' %}
-{% set tabletImg1Alt = 'Whisky Parts Co Website, tablet example' %}
-{% set mobileImg1 = 'assets/media/images/web/Whisky/product-detail_sm.jpg' %}
-{% set mobileImg1Alt = 'Whisky Parts Co Website, mobile example' %}
-
-{% set desktopImg2 = 'assets/media/images/web/Whisky/select-detail_lg.jpg' %}
-{% set desktopImg2Alt = 'Whisky Parts Co Website, desktop example' %}
-{% set tabletImg2 = 'assets/media/images/web/Whisky/select-detail_md.jpg' %}
-{% set tabletImg2Alt = 'Whisky Parts Co Website, tablet example' %}
-{% set mobileImg2 = 'assets/media/images/web/Whisky/select-detail_sm.jpg' %}
-{% set mobileImg2Alt = 'Whisky Parts Co Website, mobile example' %}
-
 {% set workTitle = 'Whisky Parts Co' %}
 
 {% block workDescription %}
@@ -27,3 +13,42 @@
 
 {% set roles = ['Project leadership','Digital strategy','Wireframing','User experience design','Web design','Front-end development','CMS customization'] %}
 
+{% set workImagePath = 'assets/media/images/web/Whisky' %}
+
+{% set workImages = [
+	{
+		'desktop' : {
+			'imgName': 'product-detail_desktop',
+			'imgExtension': '.jpg',
+			'altText': 'Whisky Parts Co Website, desktop example 1'
+		},
+		'tablet' : {
+			'imgName': 'product-detail_tablet',
+			'imgExtension': '.jpg',
+			'altText': 'Whisky Parts Co Website, tablet example 1'
+		},
+		'mobile' : {
+			'imgName': 'product-detail_mobile',
+			'imgExtension': '.jpg',
+			'altText': 'Whisky Parts Co Website, mobile example 1'
+		}
+	},
+	{
+		'desktop': {
+			'imgName': 'select-detail_desktop',
+			'imgExtension': '.jpg',
+			'altText': 'Whisky Parts Co Website, desktop example 2'
+		},
+		'tablet': {
+			'imgName': 'select-detail_tablet',
+			'imgExtension': '.jpg',
+			'altText': 'Whisky Parts Co Website, tablet example 2'
+		},
+		'mobile': {
+			'imgName': 'select-detail_mobile',
+			'imgExtension': '.jpg',
+			'altText': 'Whisky Parts Co Website, mobile example 2'
+		}
+	}
+]
+%}

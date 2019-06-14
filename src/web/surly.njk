@@ -3,20 +3,6 @@
 
 {% set workID = 'surly' %}
 
-{% set desktopImg1 = 'assets/media/images/web/Surly/bikes-landing_lg.jpg' %}
-{% set desktopImg1Alt = 'Surly Bikes Website, desktop example' %}
-{% set tabletImg1 = 'assets/media/images/web/Surly/bikes-landing_md.jpg' %}
-{% set tabletImg1Alt = 'Surly Bikes Website, tablet example' %}
-{% set mobileImg1 = 'assets/media/images/web/Surly/bikes-landing_sm.jpg' %}
-{% set mobileImg1Alt = 'Surly Bikes Website, mobile example' %}
-
-{% set desktopImg2 = 'assets/media/images/web/Surly/dealers_lg.jpg' %}
-{% set desktopImg2Alt = 'Surly Bikes Website, desktop example' %}
-{% set tabletImg2 = 'assets/media/images/web/Surly/dealers_md.jpg' %}
-{% set tabletImg2Alt = 'Surly Bikes Website, tablet example' %}
-{% set mobileImg2 = 'assets/media/images/web/Surly/dealers_sm.jpg' %}
-{% set mobileImg2Alt = 'Surly Bikes Website, mobile example' %}
-
 {% set workTitle = 'Surly Bikes' %}
 
 {% block workDescription %}
@@ -26,3 +12,43 @@
 {% set websiteUrl = 'https://surlybikes.com/' %}
 
 {% set roles = ['Digital strategy','Wireframing','User experience design','Front-end development'] %}
+
+{% set workImagePath = 'assets/media/images/web/Surly' %}
+
+{% set workImages = [
+	{
+		'desktop' : {
+			'imgName': 'bikes-landing_desktop',
+			'imgExtension': '.jpg',
+			'altText': 'Surly Bikes Website, desktop example 1'
+		},
+		'tablet' : {
+			'imgName': 'bikes-landing_tablet',
+			'imgExtension': '.jpg',
+			'altText': 'Surly Bikes Website, tablet example 1'
+		},
+		'mobile' : {
+			'imgName': 'bikes-landing_mobile',
+			'imgExtension': '.jpg',
+			'altText': 'Surly Bikes Website, mobile example 1'
+		}
+	},
+	{
+		'desktop': {
+			'imgName': 'dealers_desktop',
+			'imgExtension': '.jpg',
+			'altText': 'Surly Bikes Website, desktop example 2'
+		},
+		'tablet': {
+			'imgName': 'dealers_tablet',
+			'imgExtension': '.jpg',
+			'altText': 'Surly Bikes Website, tablet example 2'
+		},
+		'mobile': {
+			'imgName': 'dealers_mobile',
+			'imgExtension': '.jpg',
+			'altText': 'Surly Bikes Website, mobile example 2'
+		}
+	}
+]
+%}
