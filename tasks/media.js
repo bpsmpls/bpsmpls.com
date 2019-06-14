@@ -20,6 +20,7 @@ function buildMedia() {
     const browser = browserSync.get('local');
     const src = [
         `${process.env.DIRECTORY_SRC}/assets/media/**/*`,
+        `!${process.env.DIRECTORY_SRC}/assets/media/images/web/**/*`,
         `!${process.env.DIRECTORY_SRC}/assets/media/favicon/_src`,
         `!${process.env.DIRECTORY_SRC}/assets/media/favicon/_src/**`,
     ];
