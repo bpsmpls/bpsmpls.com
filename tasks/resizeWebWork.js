@@ -22,15 +22,61 @@ export default function resizeWebWork() {
     return gulp
         .src(src)
         .pipe(responsive({
-            '**/*_lg.jpg': {
-                width: 1000
-            },
-            '**/*_md.jpg': {
-                width: 700
-            },
-            '**/*_sm.jpg': {
-                width: 300
-            }
+            '**/*_desktop.jpg': [
+                {
+                    width: 1200,
+                    rename: { suffix: '-1200' },
+                    withoutEnlargement: false
+                },
+                {
+                    width: 1000,
+                    rename: { suffix: '-1000' }
+                },
+                {
+                    width: 800,
+                    rename: { suffix: '-800' }
+                },
+                {
+                    width: 600,
+                    rename: { suffix: '-600' }
+                },
+            ],
+            '**/*_tablet.jpg': [
+                {
+                    width: 700,
+                    rename: { suffix: '-700' }
+                },
+                {
+                    width: 583,
+                    rename: { suffix: '-583' }
+                },
+                {
+                    width: 467,
+                    rename: { suffix: '-467' }
+                },
+                {
+                    width: 350,
+                    rename: { suffix: '-350' }
+                },
+            ],
+            '**/*_mobile.jpg': [
+                {
+                    width: 300,
+                    rename: { suffix: '-300' }
+                },
+                {
+                    width: 250,
+                    rename: { suffix: '-250' }
+                },
+                {
+                    width: 200,
+                    rename: { suffix: '-200' }
+                },
+                {
+                    width: 150,
+                    rename: { suffix: '-150' }
+                },
+            ]
         },
         {
             // Global configuration for all images
