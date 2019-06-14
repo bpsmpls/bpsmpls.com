@@ -32,9 +32,7 @@ function buildMarkup() {
         `${process.env.DIRECTORY_SRC}/**/*.njk`,
         `!${process.env.DIRECTORY_SRC}/assets/**`,
         `!${process.env.DIRECTORY_SRC}/templates/**`,
-        `!${process.env.DIRECTORY_SRC}/music/**`,
-        `!${process.env.DIRECTORY_SRC}/video/**`,
-        `!${process.env.DIRECTORY_SRC}/web/**`,
+        `!${process.env.DIRECTORY_SRC}/data/**`,
     ];
 
     return gulp
