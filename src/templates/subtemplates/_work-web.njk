@@ -12,7 +12,7 @@
 						sizes="(min-width:0em) 91vw,
 						       (min-width:40em) 60vw"
 						src="{{ workImagePath }}/{{ workImage.desktop.imgName }}-800{{ workImage.desktop.imgExtension }}" 
-						alt="{{ workImage.desktop.AltText|safe }}" 
+						alt="{{ workImage.desktop.altText|safe }}" 
 						class="desktop">
 					<img 
 						srcset="{{ workImagePath }}/{{ workImage.tablet.imgName }}-700{{ workImage.tablet.imgExtension }} 700w,
@@ -22,7 +22,7 @@
 						sizes="(min-width:0em) 30vw,
 						       (min-width:40em) 20vw" 
 						src="{{ workImagePath }}/{{ workImage.tablet.imgName }}-467{{ workImage.tablet.imgExtension }}" 
-						alt="{{ workImage.tablet.AltText|safe }}" 
+						alt="{{ workImage.tablet.altText|safe }}" 
 						class="tablet">
 					<img 
 						srcset="{{ workImagePath }}/{{ workImage.mobile.imgName }}-300{{ workImage.mobile.imgExtension }} 300w,
@@ -32,7 +32,7 @@
 						sizes="(min-width:0em) 15vw,
 						       (min-width:40em) 10vw" 
 						src="{{ workImagePath }}/{{ workImage.mobile.imgName }}-300{{ workImage.mobile.imgExtension }}" 
-						alt="{{ workImage.mobile.AltText|safe }}" 
+						alt="{{ workImage.mobile.altText|safe }}" 
 						class="mobile">
 				</figure>
 			{% endif %}
