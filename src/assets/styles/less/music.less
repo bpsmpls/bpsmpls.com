@@ -76,7 +76,7 @@
 				}
 
 				&:hover {
-					@size:12.8vw;
+					@size:15.25vw;
 
 					figure {
 						padding:1vw;
@@ -89,27 +89,30 @@
 					@x-increment:@size;
 					@y-increment:@size;
 
-					.quest      { .transform(rotate(0deg));   left:0vw + (@x-increment * 6);   top:0vw + (@y-increment * 2); }
-					.bln        { .transform(rotate(0deg));   left:0vw + (@x-increment * 5);   top:0vw + (@y-increment * 2); }
-					.improv     { .transform(rotate(0deg));   left:0vw + (@x-increment * 4);   top:0vw + (@y-increment * 2); }
-					.hyperzoa   { .transform(rotate(0deg));   left:0vw + (@x-increment * 3);   top:0vw + (@y-increment * 2); }
-					.trocaderos { .transform(rotate(0deg));   left:0vw + (@x-increment * 2);   top:0vw + (@y-increment * 2); }
-					.emmao      { .transform(rotate(0deg));   left:0vw + (@x-increment * 1);   top:0vw + (@y-increment * 2); }
-					.tcr        { .transform(rotate(0deg));   left:0vw + (@x-increment * 0);   top:0vw + (@y-increment * 2); }
-					.gizmo      { .transform(rotate(0deg));   left:0vw + (@x-increment * 6);   top:0vw + (@y-increment * 1); }
-					.bar        { .transform(rotate(0deg));   left:0vw + (@x-increment * 5);   top:0vw + (@y-increment * 1); }
-					.dad        { .transform(rotate(0deg));   left:0vw + (@x-increment * 4);   top:0vw + (@y-increment * 1); }
-					.fall       { .transform(rotate(0deg));   left:0vw + (@x-increment * 3);   top:0vw + (@y-increment * 1); }
-					.asis       { .transform(rotate(0deg));   left:0vw + (@x-increment * 2);   top:0vw + (@y-increment * 1); }
-					.hypotenuse { .transform(rotate(0deg));   left:0vw + (@x-increment * 1);   top:0vw + (@y-increment * 1); }
-					.sigh       { .transform(rotate(0deg));   left:0vw + (@x-increment * 0);   top:0vw + (@y-increment * 1); }
-					.fd         { .transform(rotate(0deg));   left:0vw + (@x-increment * 6);   top:0vw + (@y-increment * 0); }
-					.atlas      { .transform(rotate(0deg));   left:0vw + (@x-increment * 5);   top:0vw + (@y-increment * 0); }
-					.clarity    { .transform(rotate(0deg));   left:0vw + (@x-increment * 4);   top:0vw + (@y-increment * 0); }
-					.dottedlegs { .transform(rotate(0deg));   left:0vw + (@x-increment * 3);   top:0vw + (@y-increment * 0); }
-					.tdr        { .transform(rotate(0deg));   left:0vw + (@x-increment * 2);   top:0vw + (@y-increment * 0); }
-					.grounded   { .transform(rotate(0deg));   left:0vw + (@x-increment * 1);   top:0vw + (@y-increment * 0); }
-					.tdr3       { .transform(rotate(0deg));   left:0vw + (@x-increment * 0);   top:0vw + (@y-increment * 0); }
+					// X increment is base 0 with how many items will fit on a row, and positioning
+					// Y increment is how many rows
+					.quest      { .transform(rotate(0deg));   left:0vw + (@x-increment * 4.5);   top:0vw + (@y-increment * 3); }
+					.bln        { .transform(rotate(0deg));   left:0vw + (@x-increment * 3.5);   top:0vw + (@y-increment * 3); }
+					.improv     { .transform(rotate(0deg));   left:0vw + (@x-increment * 2.5);   top:0vw + (@y-increment * 3); }
+					.hyperzoa   { .transform(rotate(0deg));   left:0vw + (@x-increment * 1.5);   top:0vw + (@y-increment * 3); }
+					.trocaderos { .transform(rotate(0deg));   left:0vw + (@x-increment * 0.5);   top:0vw + (@y-increment * 3); }
+					.emmao      { .transform(rotate(0deg));   left:0vw + (@x-increment * 5);     top:0vw + (@y-increment * 2); }
+					.tcr        { .transform(rotate(0deg));   left:0vw + (@x-increment * 4);     top:0vw + (@y-increment * 2); }
+					.gizmo      { .transform(rotate(0deg));   left:0vw + (@x-increment * 3);     top:0vw + (@y-increment * 2); }
+					.bar        { .transform(rotate(0deg));   left:0vw + (@x-increment * 2);     top:0vw + (@y-increment * 2); }
+					.dad        { .transform(rotate(0deg));   left:0vw + (@x-increment * 1);     top:0vw + (@y-increment * 2); }
+					.fall       { .transform(rotate(0deg));   left:0vw + (@x-increment * 0);     top:0vw + (@y-increment * 2); }
+					.asis       { .transform(rotate(0deg));   left:0vw + (@x-increment * 4.5);   top:0vw + (@y-increment * 1); }
+					.hypotenuse { .transform(rotate(0deg));   left:0vw + (@x-increment * 3.5);   top:0vw + (@y-increment * 1); }
+					.sigh       { .transform(rotate(0deg));   left:0vw + (@x-increment * 2.5);   top:0vw + (@y-increment * 1); }
+					.fd         { .transform(rotate(0deg));   left:0vw + (@x-increment * 1.5);   top:0vw + (@y-increment * 1); }
+					.atlas      { .transform(rotate(0deg));   left:0vw + (@x-increment * 0.5);   top:0vw + (@y-increment * 1); }
+					.clarity    { .transform(rotate(0deg));   left:0vw + (@x-increment * 5);     top:0vw + (@y-increment * 0); }
+					.dottedlegs { .transform(rotate(0deg));   left:0vw + (@x-increment * 4);     top:0vw + (@y-increment * 0); }
+					.tdr        { .transform(rotate(0deg));   left:0vw + (@x-increment * 3);     top:0vw + (@y-increment * 0); }
+					.grounded   { .transform(rotate(0deg));   left:0vw + (@x-increment * 2);     top:0vw + (@y-increment * 0); }
+					.tdr3       { .transform(rotate(0deg));   left:0vw + (@x-increment * 1);     top:0vw + (@y-increment * 0); }
+					.healing    { .transform(rotate(0deg));   left:0vw + (@x-increment * 0);     top:0vw + (@y-increment * 0); }
 
 					+ .description {
 						opacity:0;
